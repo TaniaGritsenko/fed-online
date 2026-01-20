@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Самостійна робота</title>
+</head>
+<body>
+    <h1>Реєстрація</h1>
+    <form>
+        <!--Дані про себе-->
+        <p>
+        <label>
+            Ім'я
+                <input type="text"placeholder="Введіть ім'я">
+        </label>
+        </p>
+                <br>
+        <p>
+        <label>
+            Прізвище
+            <input type="text"placeholder="Введіть прізвище">
+        </label>
+        </p>
+        <br>
+        <p>Стать</p>
+        <p>
+        <label>
+            <input type="radio" name="стать">
+            Чоловік
+        </label>
+        <label>
+            <input type="radio" name="стать">
+            Жінка
+        </label>
+        <label>
+            <input type="radio" name="стать">
+        Дитина
+        </label>
+        </p>
+        <p>Вік</p>
+        <p>
+        <label>
+        <input type="radio" name="вік">
+            Менше 18 років.
+        </label>
+        <br>
+                <label>
+        <input type="radio" name="вік">
+            Більше 18 років.
+      </label>
+        </p>
+      <br>
+      <p>
+      <label for="password">
+                Введіть пароль
+         </label>
+       <input placeholder="Введіть пароль" id="password" type="password"> 
+       </p>
+       <p>
+      <label for="password">
+                Повторіть пароль
+         </label>
+       <input placeholder="Повторіть пароль" id="password" type="password"> 
+       </p>
+      <br>
+      <p>
+      <label>
+        Добавити фото профілю
+      </label>
+      <input type="file">
+      <br>
+            <!--Приховане поле-->
+            <label>
+      <input type="hidden" value="Реєстрація">
+            </label>
+      </p>
+      <p>
+        <label>
+            <input type="submit" value="Зареєструватися">
+        </label>
+        <label>
+            <input type="reset" value="Відмовитися від реєстрації">
+        </label>
+      </p>
+    </form>
+</body>
+</html>
