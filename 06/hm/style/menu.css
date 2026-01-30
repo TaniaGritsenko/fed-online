@@ -1,24 +1,102 @@
 * {
     box-sizing: border-box;
 }
-
-body {
-    background-color: #F6F5F5;
+body{
+background-color:#f7b3b3;
+font-family: "Inter",
+    sans-serif;
 }
-
-.container {
+.container{
     width: 360px;
-    margin: 100px;
+    margin: 100px auto;
     border-radius: 20px;
-    background-color: #FFF;
-    padding: 56px 20px 91px 20px;
+    background: #fff;
+    padding: 56px 22px 91px 20px;
 }
+
 button{
     border: none;
-    background-color: FFF;
+    background-color:  #fff;
     margin-bottom: 23px;
 }
 h1{
-    font-weight: 600;
+font-weight: 600;
     font-size: 32px;
+    margin-bottom: 17px;
+}
+.search-input {
+    padding: 5px 10px;
+    width: 230px;
+    margin-bottom: 29px;
+}
+.menu-items{
+ 
+    padding: 0px 46px 0px 4px;   
+}
+.position-img{
+    width:74px;
+    height: 74px;
+    border-radius: 12px;
+    background-color: #efefef;
+    text-align: center;
+    padding: 15px;
+    
+}
+
+.position-title{
+    color:#c4c4c4;
+    font-weight: 500;
+        font-size: 16px
+}
+.menu-position{
+    display: inline-block;
+    
+}
+.menu-position:hover .position-img{
+background-color: #eae2b7;
+
+}
+.menu-position:hover .position-title{
+    color:#000;
+}
+
+.burger-title{
+    color: #003049;
+    margin:  32px 251px 26px 2px;
+    font-weight: 500;
+        font-size: 20px;
+}
+.burger-img{
+    display: inline-block;
+
+    
+}
+.burger-name{
+font-size: 16px;
+    color: #003049;
+    padding: 0;
+    margin-bottom: 2px ;
+    font-weight: 400;
+}
+.burger-price{
+    margin: 0;
+    font-weight: 500;
+        font-size: 14px;
+    color: #d62828;
+}
+
+      
+.title-price{
+    display: inline-block;
+    vertical-align: top;
+}
+.burger-position{
+    width: 316px;
+        height: 88px;
+        border-radius: 10px;
+        border: 2px solid gray;
+        padding: 5px;
+}
+.burger-position:not(:last-child){
+margin-bottom: 12px;
 }
