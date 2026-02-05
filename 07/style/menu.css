@@ -23,8 +23,9 @@ h1{
 margin-bottom: 17px;
 }
 .search-input {
-    padding: 5px 10px;
-    width: 230px;
+    padding: 4px;
+    width: 314px;
+    border: 1px solid lightgray;
     margin-bottom: 29px;
       }
      .menu-items{
@@ -39,6 +40,7 @@ margin-bottom: 22px;
 color: rgba(0, 0, 0, 1);
 font-size: 16px;
 text-align: center;
+padding-top: 14px;
 }
 h4{
     color:#c4c4c4;
@@ -56,18 +58,21 @@ background-color: #eae2b7;
 .menu-position:hover .position-title{
     color:#000;
 }
+h2 {
+    display: inline-block;
+}
 
 .burger-card{
     color: #003049;
-    margin:  32px 251px 26px 2px;
+    margin:  32px 2px 26px 2px;
     font-weight: 500;
         font-size: 20px;
+        padding: 5px;
+        border: 2px solid red;
 }
 .burger-img{
     display: inline-block;
-
-    
-}
+   }
 .burger-name{
 font-size: 16px;
     color: #003049;

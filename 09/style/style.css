@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #E5E5E5
+}
+    .Diia{
+    width: 512px;
+height: 512px;
+background-color: rgba(0, 0, 0, 1);
+display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+    }
+.vector{
+    position:absolute;
+    top: 110px;
+    left: 50px;
+}
+.Flag{
+    margin-top: 20px;
+}
+.Flag-blue{
+width: 80px;
+height: 30px;
+background-color: rgba(33, 55, 251, 1);
+
+}
+.Flag-yellow{
+    width: 80px;
+    height: 30px;
+    background-color: rgba(255, 216, 75, 1);
+  }
+.position-reletion{
+    position: absolute;
+    width: 512px;
+    height: 512px;
+    background-color: #FFCE22;
+    top: 450px;
+    left: 400px;
+    right: 75px;
+    z-index: 1;
+}
+.blue-block{
+    position: absolute;
+    width: 512px;
+    height: 256px;
+    background-color: blue;
+    }
+.img-position{
+    position: absolute;
+    top: 145px;
+    left: 60px;
+    right: 60px;
+    bottom: 140px;
+}
+.position-reletion-third{
+    position: absolute;
+    background-color: white;
+    width: 512px;
+    height: 512px;
+    left: 855px;
+top: 850px;
+    
+  }
+  .yellow-circle{
+    position: absolute;
+    width: 444px;
+    height: 444px;
+    background-color: #FFCE22;
+    margin: 35px 35px;
+    z-index: 2;
+    border-radius:250px;
+    
+  }
+.img-circle{
+    position: absolute;
+    top: 250px;
+    left: 80px;
+    right: 75px;
+    bottom: 60px;
+    z-index: 2;
+    overflow: hidden;
+}
+    
