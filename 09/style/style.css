@@ -21,6 +21,8 @@ display: flex;
 }
 .Flag{
     margin-top: 20px;
+    border-radius: 6px;
+    overflow: hidden;
 }
 .Flag-blue{
 width: 80px;
@@ -63,8 +65,9 @@ background-color: rgba(33, 55, 251, 1);
     height: 512px;
     left: 855px;
 top: 850px;
-    
-  }
+border-bottom: 2px solid blue;
+border-top: 2px solid blue;
+      }
   .yellow-circle{
     position: absolute;
     width: 444px;
