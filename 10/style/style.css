@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+body {
+  background-color: rgba(0, 161, 198, 0.05);
+}
+.container {
+  width: 1240px;
+  margin: 0 auto;
+  padding-top: 142px;
+  padding-bottom: 128px;
+}
+h1 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 2;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+h1 span {
+  font-weight: 400;
+}
+.text-head {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  max-width: 695px;
+  margin-bottom: 50px;
+}
+.clearfix {
+  content: "";
+  clear: both;
+  display: table;
+}
+.information-card {
+  width: 295px;
+  height: 470px;
+  padding-top: 56px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(234, 237, 242);
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(45, 54, 64, 0.05);
+  float: left;
+  margin-right: 20px;
+}
+.information-card:last-child {
+  margin-right: 0;
+}
+.item-image-container {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 100%;
+  margin: 0 auto;
+  margin-bottom: 34px;
+  border: 2px solid rgb(239, 243, 248);
+}
+.item-image {
+  width: 100%;
+  height: auto;
+}
+.text {
+  margin-bottom: 33px;
+  font-family: sans-serif;
+  text-align: center;
+}
+.name {
+  color: rgb(45, 54, 64);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 33px;
+}
+.profession {
+  color: rgb(75, 79, 82);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.item-tech-image-container {
+  width: 55px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 100%;
+  display: inline-block;
+}
+.item-tech-image-container:last-child {
+    margin-right: 0;
+}
+.tech-image {
+    width: 100%;
+    height: auto;
+}
+.tech-images {
+    text-align: center;
+}
