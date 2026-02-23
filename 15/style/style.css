@@ -51,6 +51,10 @@ height: 74px;
     margin: 0 auto;
 }
 .text-genre{
+    display: flex;
+    gap: 15px;
+}
+.text-genre h3{
 color: rgba(255, 255, 255, 1);
 font-family: Inter;
 font-size: 32px;
@@ -58,6 +62,10 @@ font-weight: 500;
 line-height: 39px;
 letter-spacing: 2px;
 text-align: left;
+}
+.text-genre h3:not(:last-child)::after{
+    content: "|";
+margin-left: 15px;
 }
 .movie-title{
 color: rgba(255, 255, 255, 1);
@@ -168,6 +176,7 @@ background: transparent;
 border: 1px solid white;
 justify-content: center;
 align-items: center;
+display: flex;
 }
 .cards-container{
 display: flex;
