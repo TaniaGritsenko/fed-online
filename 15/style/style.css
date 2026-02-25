@@ -218,7 +218,7 @@ text-align: right;
     }
     .search{
         position: relative;
-        left: 25%;
+        left: 45%;
     }
     .movie-title{
         white-space: nowrap;
@@ -237,7 +237,7 @@ text-align: right;
         white-space: nowrap;
     }
     .buttons{
-        gap: 50%;
+        gap: 20%;
     }
     .popular{
         white-space: nowrap;
@@ -246,13 +246,15 @@ text-align: right;
         font-size: 30px;
     }
     .navigate{
-        margin-left: 115%;
+        margin-left: 110%;
     }
     .cards-container{
-        gap: 1px;
+        gap: 10px;
     }
     .years{
-        transform: translateX(250%);
+        position: fixed;
+        top: 150px;
+        right: 10px;
     }
 }
     
