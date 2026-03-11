@@ -143,6 +143,7 @@ background-color: black;
  padding: 15px;
  border-radius: 10px;
  transition: border 0.3s, box-shadow 0.3s;
+ border: none;
 }
 .icons2:hover{
     border: 2px solid fuchsia; 
@@ -502,6 +503,17 @@ nav a{
     justify-content: center;
     align-items: flex-start;
     gap: 10px;
+    overflow: hidden;
+}
+.shoes1mob{
+    position: relative;
+    left: -20px;
+}
+.shoes2mob{
+    position: relative;
+    right: -18px;
+    bottom: -10px;
+    width: 57%;
 }
 .shoes1mob,
 .shoes2mob{
