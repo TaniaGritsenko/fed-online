@@ -274,6 +274,8 @@ letter-spacing: 0%;
 text-align: left;
 border-bottom: 2px solid transparent;
 transition: border-color 0.3s;
+position: relative;
+top: 20px;
 }
 .products-container h2:hover{
     border-bottom: blue;
@@ -359,7 +361,9 @@ letter-spacing: 0%;
     padding: 15px 40px;
     font-weight: 100;
     font-weight: 600;
-     transition: border 0.3s, box-shadow 0.3s;
+     transition: border 0.3s, box-shadow 0.3s; 
+     position: relative;
+     top: 20px;
 }
 .newsletter:hover{
     border: 2px solid fuchsia; 
@@ -440,6 +444,10 @@ nav{
     .text-content1 h3{
         font-size: 45px;
     }
+    .products-container h2{
+        position: relative;
+        top: 20px;
+    }
 }
 @media(min-width:600px) and (max-width:870px){
     nav{
@@ -487,7 +495,10 @@ nav a{
     display: none;
 }
 .container1{
+    padding: 0;
+    /*
     padding: 0 16px;
+    */
 }
 .main-container{
     align-items: center;
@@ -597,18 +608,26 @@ background-color: white;
     .icons-block{
         margin-right: 0;
     }
+    .products-container h2{
+        position: relative;
+        top: 20px;
+    }
     .container5{
         padding: 25px 15px;
     }
     .special-offers span{
         font-size: 25px;
+        line-height: 30px;
     }
     .special-offers p{
         font-size: 15px;
     }
     .newsletter{
+        /*
         margin-top: 15px;
-        padding: 10px 10px;
+        */
+        padding: 10px 25px;
+        top: 7px;
     }
     .footer{
         padding: 20px 10px;
