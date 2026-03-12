@@ -12,25 +12,21 @@ body{
 .container{
     width: 100%;
     max-width: 90rem;
-    margin: 0 auto;
-    padding: 0 7rem;
-}
+    padding: 0 1.5rem;
+ }
 header{
-    width: 100%;
-    max-width: 1200px;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    transform: scaleX(1);
-    transform-origin: left;
 }
 header .container{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .logo{
 color: rgba(188, 67, 106, 1);
 font-family: Open Sans;
-font-size: 1.13rem;
+font-size: 2rem;
 font-weight: 700;
 line-height: 1.56rem;
 text-decoration: none;
@@ -47,7 +43,7 @@ color: rgba(188, 67, 106, 1);
 .navigation2 a{
     color: rgba(119, 102, 119, 1);
 font-family: Avenir;
-font-size: 1rem;
+font-size: 1.5rem;
 font-weight: 400;
 line-height: 1.19rem;
 text-decoration: none;
@@ -58,7 +54,7 @@ text-decoration: none;
     border-radius: 0.25rem;
     background-color: rgba(56, 110, 65, 1);
     color: white;
-    font-size: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
     margin-left: 2rem;
 }
@@ -113,24 +109,24 @@ text-align: left;
     left: 4rem;
     z-index: 1;
 }
-.guide{
+.hero2{
     width: 100%;
     position: relative;
 }
-.guide-container{
+.hero2-container{
     display: flex;
     align-items: center;
 }
-.guide-square{
+.decor-block{
 position: relative;
 top: -20rem;
-right: 10rem;
+right: 7rem;
 overflow: hidden;
 }
-.guide-square img{
+.decor-block img{
 margin-left: -10px;
 }
-.guide-info{
+.info{
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -138,7 +134,7 @@ margin-left: -10px;
     right: 7rem;
     top: -14rem;
 }
-.guide-info h2{
+.info h2{
     color: rgba(118, 118, 118, 1);
 font-family: Avenir;
 font-size: 1.13rem;
@@ -148,7 +144,7 @@ letter-spacing: 0%;
 text-align: left;
 margin: 0;
 }
-.guide-info i{
+.info i{
      color: rgba(118, 118, 118, 1);
     border: none;
    
@@ -171,8 +167,6 @@ margin: 0;
     margin-top: -16rem;
     position: relative;
     z-index: 2;
-    transform: scaleX(1);
-    transform-origin: left;
 }
 .search-block{
     background-color:rgba(56, 110, 65, 1) ;
@@ -255,64 +249,76 @@ color: gray;
 }
 @media(max-width:1260px){
     html{
-        font-size: 13px;
+      font-size: 14px;
     }
     .container{
-        padding: 0 9rem;
+      padding: 0 3rem;
     }
-      .form-container .input-submit{
-        margin-left: 80px;
-        margin-right: 80px;
-    }
-    .hero-image{
+        .hero-image{
         background-position: top 0 right -50px;
     }
         .hero-text{
             top: -9rem;
     }
-    .guide-square{
-            top: -22rem;
-    right: 13rem;
-    }
-    
-    .search{
-        margin-top: -20rem;
-    }
-        
-    .guide-info{
+    .decor-block{
+            top: -21rem;
     right: 9rem;
-    top: -17rem;
+    }
+        .search{
+        margin-top: -17rem;
+    }
+    .info{
+    top: -15rem;
     }
 }
-
 @media(min-width:750px) and (max-width:900px){
     html{
-font-size: 10px;
-    }
-    .container{
-padding: 0 10rem;
+font-size: 14px;
     }
     .hero-image{
-        left: 0;
-        background-position: top 0;
-    }
-    .guide-square{
-        right: 12rem;
-    }
-    header{
-        transform: scaleX(1);
-    transform-origin: left;
+left: -6rem;
     }
 }
 @media(max-width:740px){
-    html{
-font-size: 9px;
+    header{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
-    .hero-image{
-        width: 25rem;
-        height: 25rem;
+    .hero{
+        padding: 3rem 0 0; 
     }
-}
+    .hero-text{
+        flex: 0 0 0;
+    }
+    .navigation2 a{
+    font-size: 1.8rem;
+    }
+    .nav-button{
+        font-size: 2rem;
+    }
+    .hero-text p{
+        font-size: 1.3rem;
+    }
+    header .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+    }
+    .logo{
+        font-size: 5rem;
+        text-align: center;
+    }
+    .navigation2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5rem;
+    }
+    .search-block{
+        padding: 3rem 3rem;
+    }
+    }
 @media(max-width:600px){
     html{
         font-size: 14px;
@@ -338,7 +344,7 @@ font-size: 9px;
     }
     .nav-button{
         padding: 2rem 3rem;
-        font-size: 1rem;
+        font-size: 2rem;
     }
     .hero{
         padding: 7rem 0 0 ;
@@ -358,25 +364,18 @@ font-size: 9px;
     header{
         padding-top: 5rem;
     }
-    .guide-info{
+    .info{
         right: 8rem;
+        top: -12rem;
     }
-    .guide-square{
-        
+    .search{
+        margin-top: -14rem;
     }
-    .search-block{
-        display: flex;
-        flex-direction: column;
+     .search-block{
         gap: 1rem;
         width: 100%;
         padding: 1.5rem 1rem;
-    }
-    .search-field{
-        width: 100%;
-    }
-    .search-field input{
-        width: 100%;
-        font-size: 1rem;
+        grid-template-columns: 1fr;
     }
     .search-btn{
         width: 100%;
@@ -398,7 +397,7 @@ font-size: 9px;
 .navigation2 a{
     font-size: 2rem;
 }
-.guide-square{
+.decor-block{
     overflow: visible;
 }
 .search{
@@ -415,11 +414,11 @@ font-size: 9px;
         .hero-text{
             flex: 0 0 0;
         }
-        .guide-square{
+        .decor-block{
             top: -11rem;
-            right: 11rem;
+            right: 12rem;
         }
-        .guide-info{
+        .info{
             top: -8rem;
             right: 10rem;
         }
