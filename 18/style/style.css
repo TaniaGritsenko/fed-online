@@ -6,18 +6,15 @@
     font-size: 16px;
 }
 body{
-    margin: 0;
+    margin-left: 4rem;
     font-family: 'Open Sans', sans-serif;
+    padding: 2.5rem 2.5rem 2.5rem;
+    position: relative;
 }
 .container{
     width: 100%;
     max-width: 90rem;
-    padding: 0 1.5rem;
  }
-header{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-}
 header .container{
     display: flex;
     align-items: center;
@@ -30,11 +27,14 @@ font-size: 2rem;
 font-weight: 700;
 line-height: 1.56rem;
 text-decoration: none;
+display: inline-block;
+position: relative;
 }
 .navigation2{
     display: flex;
     align-items: center;
     gap: 1rem;
+
     margin-left: auto;
 }
 .navigation2 .active{
@@ -57,6 +57,8 @@ text-decoration: none;
     font-size: 1.5rem;
     cursor: pointer;
     margin-left: 2rem;
+    display: inline-block;
+    position: relative;
 }
 .hero{
     width: 100%;
@@ -99,7 +101,7 @@ text-align: left;
 .hero-image{
     background-image: url(../img/Image.png);
     background-size: cover; 
-    background-position: top 0 right -100px;
+    background-position: calc(100% + 4rem) 0;
     background-repeat: no-repeat;
     width: 43rem;
     height: 43rem;
@@ -120,7 +122,7 @@ text-align: left;
 .decor-block{
 position: relative;
 top: -20rem;
-right: 7rem;
+right: 8rem;
 overflow: hidden;
 }
 .decor-block img{
@@ -145,9 +147,8 @@ text-align: left;
 margin: 0;
 }
 .info i{
-     color: rgba(118, 118, 118, 1);
-    border: none;
-   
+color: rgba(118, 118, 118, 1);
+ border: none;
 }
 .form-container form{
     background-color: #386E41;
@@ -248,130 +249,97 @@ height: 1.56rem;
 color: gray;
 }
 @media(max-width:1260px){
-    html{
-      font-size: 14px;
-    }
-    .container{
-      padding: 0 3rem;
-    }
-        .hero-image{
-        background-position: top 0 right -50px;
-    }
-        .hero-text{
-            top: -9rem;
-    }
-    .decor-block{
-            top: -21rem;
-    right: 9rem;
-    }
-        .search{
-        margin-top: -17rem;
-    }
-    .info{
-    top: -15rem;
-    }
+  .decor-block{
+   right: 10rem;
+     }
 }
-@media(min-width:750px) and (max-width:900px){
+@media(max-width:1000px){
     html{
-font-size: 14px;
+        font-size: 14px;
+    }
+    .logo{
+        font-size: 2rem;
     }
     .hero-image{
-left: -6rem;
+        left: -5rem
+    }
+    .hero-text p{
+        font-size:1.5rem;
     }
 }
-@media(max-width:740px){
-    header{
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+@media(max-width:770px){
+    html{
+        font-size: 16px;
+    }
+    
+    header .container{
+        flex-direction: column;
+        gap: 5rem;
+    }
+    .logo{
+        font-size: 5rem;
+    }
+    .navigation2{
+        flex-wrap: wrap;
+        gap: 5rem;
+        justify-content: center;
+    }
+    .navigation2 a{
+        font-size: 3rem;
+    }
+    .nav-button{
+        font-size: 2rem;
+    }
+    .hero2{
+        margin-top: 3rem;
+    }
+    .info{
+        top: -11rem;
+    }
+    .decor-block{
+        top: -15rem;
+    }
+    .search{
+        margin-top: -13rem;
+    }
+    .footer-info{
+        margin-left: 1rem;
+        margin-top: -1rem;
+    }
+}
+@media(max-width:670px){
+    body{
+        margin-left: 3rem;
     }
     .hero{
-        padding: 3rem 0 0; 
+        padding: 10rem 0 0;
     }
     .hero-text{
         flex: 0 0 0;
     }
-    .navigation2 a{
-    font-size: 1.8rem;
-    }
-    .nav-button{
-        font-size: 2rem;
-    }
-    .hero-text p{
-        font-size: 1.3rem;
-    }
-    header .container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5rem;
-    }
-    .logo{
-        font-size: 5rem;
-        text-align: center;
-    }
-    .navigation2{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5rem;
-    }
-    .search-block{
-        padding: 3rem 3rem;
-    }
-    }
-@media(max-width:600px){
-    html{
-        font-size: 14px;
-    }
-    header .container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5rem;
-    }
-    .logo{
-        font-size: 5rem;
-        text-align: center;
-    }
-    .navigation2{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5rem;
-    }
-    .navigation2 a{
-        font-size: 4rem;
-    }
-    .nav-button{
-        padding: 2rem 3rem;
-        font-size: 2rem;
-    }
-    .hero{
-        padding: 7rem 0 0 ;
-    }
-    .hero-text h2{
-        font-size: 3rem;
-    }
-    .hero-text p{
-        font-size: 1.5rem;
-    }
     .hero-image{
+    width: clamp(24rem, 40vw, 24rem);
+    height: clamp(24rem, 40vw, 24rem);
+    }
+    
+    .hero-image{
+        left: -7.3rem;
+    }
+        .decor-block{
         top: -10rem;
-        width: 37rem;
-        height: 37rem;
-        left: -4rem;
-    }
-    header{
-        padding-top: 5rem;
-    }
-    .info{
         right: 8rem;
-        top: -12rem;
+        }
+    .info{
+        top: -7rem;
+        flex-wrap: nowrap;
+    }
+    .info p{
+        font-size: 1.25rem;
     }
     .search{
-        margin-top: -14rem;
+        margin-top: -9rem;
     }
-     .search-block{
+    .search-block{
         gap: 1rem;
         width: 100%;
         padding: 1.5rem 1rem;
@@ -381,49 +349,27 @@ left: -6rem;
         width: 100%;
         max-width: 12rem;
         margin: 0 auto;
-    }
-    .footer .container{
-        display: flex;
-        justify-content: center;
-    }
-    .footer-info{
+        font-size: 1.5rem;
         text-align: center;
     }
 }
-    @media(max-width:460px){
-.logo{
-    font-size: 4rem;
-}
-.navigation2 a{
-    font-size: 2rem;
-}
+@media(max-width:450px){
+    html{
+        font-size: 11px;
+    }
+    .logo{
+        font-size: 2rem;
+    }
 .decor-block{
+    right: 11.5rem;
     overflow: visible;
 }
-.search{
-    margin-top: -10rem;
+.info{
+    right: 5rem;
 }
-    }
-    @media(max-width:450px){
-        html{
-            font-size: 10px;
-        }
-        .container{
-            padding: 0 3rem;
-        }
-        .hero-text{
-            flex: 0 0 0;
-        }
-        .decor-block{
-            top: -11rem;
-            right: 12rem;
-        }
-        .info{
-            top: -8rem;
-            right: 10rem;
-        }
-        .footer-info{
-            margin-left: 0;
-        }
-    }
-    
+.info p{
+    position: relative;
+    flex-wrap: nowrap;
+}
+}
+   
