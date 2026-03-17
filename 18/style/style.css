@@ -6,14 +6,14 @@
     font-size: 16px;
 }
 body{
-    margin-left: 4rem;
+    margin: 0;
     font-family: 'Open Sans', sans-serif;
-    padding: 2.5rem 2.5rem 2.5rem;
-    position: relative;
 }
 .container{
     width: 100%;
     max-width: 90rem;
+    margin: 0 auto;
+    padding: 2rem 2rem;
  }
 header .container{
     display: flex;
@@ -34,7 +34,6 @@ position: relative;
     display: flex;
     align-items: center;
     gap: 1rem;
-
     margin-left: auto;
 }
 .navigation2 .active{
@@ -74,7 +73,7 @@ text-decoration: none;
     max-width: 30rem;
 position: relative;
 top: -5rem;
-flex: 0 0 30rem;
+flex: 0 1 30rem;
 }
 .hero-text h1{
     font-family: Avenir;
@@ -107,34 +106,35 @@ text-align: left;
     height: 43rem;
     overflow: hidden;
     flex-shrink: 0;
-    position: relative;
-    left: 4rem;
+    transform: translateX(4rem);
     z-index: 1;
 }
 .hero2{
-    width: 100%;
+    position: relative;
+    margin-top: 1rem;
+}
+.hero2 .container{
     position: relative;
 }
 .hero2-container{
+    position: relative;
+    min-height: 8rem;
     display: flex;
     align-items: center;
+
 }
 .decor-block{
-position: relative;
-top: -20rem;
-right: 8rem;
-overflow: hidden;
-}
-.decor-block img{
-margin-left: -10px;
+    position: absolute;
+    top: -23rem;
+    left: -6rem;
 }
 .info{
     display: flex;
     align-items: center;
     gap: 1rem;
+    padding-top: 1rem;
     position: relative;
-    right: 7rem;
-    top: -14rem;
+    top: -20rem;
 }
 .info h2{
     color: rgba(118, 118, 118, 1);
@@ -158,23 +158,24 @@ color: rgba(118, 118, 118, 1);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 1200px;
-    margin-top: -20rem;
     position: relative;
     z-index: 2;
 }
 .search{
-    width: 100%;
-    margin-top: -16rem;
     position: relative;
+    margin-top: -25rem;
     z-index: 2;
 }
+.search .container{
+    position: relative;
+}
 .search-block{
+    margin-left: auto;
     background-color:rgba(56, 110, 65, 1) ;
     border-radius: 0.5rem;
     padding: 1.6rem 2.5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr auto;
+    grid-template-columns: repeat(3,minmax(0, 1fr))auto;
     gap: 2rem;
     align-items: center;
 }
@@ -182,6 +183,7 @@ color: rgba(118, 118, 118, 1);
     position: relative;
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 .search-field input{
     width: 100%;
@@ -220,12 +222,7 @@ font-family: Avenir;
 font-size: 1.13rem;
 font-weight: 400;
 line-height: 1.38rem;
-letter-spacing: 0%;
-text-align: left;
-}
-.footer{
-    width: 100%;
-    padding: 3rem 0;
+white-space: nowrap;
 }
 .footer-info {
     display: flex;
@@ -233,8 +230,6 @@ text-align: left;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 3rem;
-    margin-left: 10rem;
 }
 .footer-text {
     color: rgba(118, 118, 118, 1);
@@ -242,34 +237,13 @@ text-align: left;
     font-size: 1.13rem;
     font-weight: 400;
     line-height: 1.38rem;
-    width: 8rem;
-height: 1.56rem;
 }
 .footer-info i{
 color: gray;
 }
-@media(max-width:1260px){
-  .decor-block{
-   right: 10rem;
-     }
-}
-@media(max-width:1000px){
-    html{
-        font-size: 14px;
-    }
-    .logo{
-        font-size: 2rem;
-    }
-    .hero-image{
-        left: -5rem
-    }
-    .hero-text p{
-        font-size:1.5rem;
-    }
-}
 @media(max-width:770px){
     html{
-        font-size: 16px;
+        font-size: 14px;
     }
     
     header .container{
@@ -307,37 +281,21 @@ color: gray;
         margin-top: -1rem;
     }
 }
-@media(max-width:670px){
-    body{
-        margin-left: 3rem;
-    }
-    .hero{
-        padding: 10rem 0 0;
-    }
-    .hero-text{
-        flex: 0 0 0;
+@media(max-width:500px){
+    html{
+        font-size: 11px;
     }
     .hero-image{
     width: clamp(24rem, 40vw, 24rem);
     height: clamp(24rem, 40vw, 24rem);
+    position: relative;
+    left: -5.5rem;
     }
-    
-    .hero-image{
-        left: -7.3rem;
-    }
-        .decor-block{
-        top: -10rem;
-        right: 8rem;
-        }
     .info{
-        top: -7rem;
-        flex-wrap: nowrap;
+        top: -10rem;
     }
-    .info p{
-        font-size: 1.25rem;
-    }
-    .search{
-        margin-top: -9rem;
+    .decor-block{
+        left: -9.5rem;
     }
     .search-block{
         gap: 1rem;
@@ -345,31 +303,4 @@ color: gray;
         padding: 1.5rem 1rem;
         grid-template-columns: 1fr;
     }
-    .search-btn{
-        width: 100%;
-        max-width: 12rem;
-        margin: 0 auto;
-        font-size: 1.5rem;
-        text-align: center;
-    }
 }
-@media(max-width:450px){
-    html{
-        font-size: 11px;
-    }
-    .logo{
-        font-size: 2rem;
-    }
-.decor-block{
-    right: 11.5rem;
-    overflow: visible;
-}
-.info{
-    right: 5rem;
-}
-.info p{
-    position: relative;
-    flex-wrap: nowrap;
-}
-}
-   
