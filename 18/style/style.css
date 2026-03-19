@@ -10,10 +10,9 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 .container{
-    width: 100%;
     max-width: 90rem;
     margin: 0 auto;
-    padding: 2rem 2rem;
+    padding: 2rem 6rem;
  }
 header .container{
     display: flex;
@@ -106,7 +105,7 @@ text-align: left;
     height: 43rem;
     overflow: hidden;
     flex-shrink: 0;
-    transform: translateX(4rem);
+    transform: translateX(2rem);
     z-index: 1;
 }
 .hero2{
@@ -121,12 +120,15 @@ text-align: left;
     min-height: 8rem;
     display: flex;
     align-items: center;
-
 }
 .decor-block{
     position: absolute;
-    top: -23rem;
-    left: -6rem;
+    top: 40rem;
+    left: 0;
+    width: 7.5rem;
+    height: 7.5rem;
+    border: 0.63rem solid rgba(56, 110, 65, 1);
+    transform: translate(-70%, -70%);
 }
 .info{
     display: flex;
@@ -170,7 +172,6 @@ color: rgba(118, 118, 118, 1);
     position: relative;
 }
 .search-block{
-    margin-left: auto;
     background-color:rgba(56, 110, 65, 1) ;
     border-radius: 0.5rem;
     padding: 1.6rem 2.5rem;
@@ -241,11 +242,31 @@ white-space: nowrap;
 .footer-info i{
 color: gray;
 }
+
+@media(max-width:1100px){
+    html{
+        font-size: 15px;
+    }
+    .hero-image{
+        width: 40rem; 
+        height: 40rem;
+    }
+    .info{
+        top: -16rem;
+    }
+    .search{
+        margin-top: -22rem;
+    }
+}
+@media(max-width:860px){
+    .container{
+        padding: 2rem 3rem;
+    }
+}
 @media(max-width:770px){
     html{
         font-size: 14px;
     }
-    
     header .container{
         flex-direction: column;
         gap: 5rem;
@@ -267,11 +288,14 @@ color: gray;
     .hero2{
         margin-top: 3rem;
     }
+    .hero-image{
+    transform: translateX(-5rem);
+    }
     .info{
-        top: -11rem;
+        top: -9rem;
     }
     .decor-block{
-        top: -15rem;
+        top: 68rem;       
     }
     .search{
         margin-top: -13rem;
@@ -281,6 +305,11 @@ color: gray;
         margin-top: -1rem;
     }
 }
+@media(max-width:600px){
+    .decor-block{
+        top: 68rem;
+    }
+}
 @media(max-width:500px){
     html{
         font-size: 11px;
@@ -288,19 +317,22 @@ color: gray;
     .hero-image{
     width: clamp(24rem, 40vw, 24rem);
     height: clamp(24rem, 40vw, 24rem);
-    position: relative;
-    left: -5.5rem;
     }
     .info{
-        top: -10rem;
+        top: -9rem;
     }
     .decor-block{
-        left: -9.5rem;
-    }
+    top: 60rem;
+}
     .search-block{
         gap: 1rem;
         width: 100%;
         padding: 1.5rem 1rem;
         grid-template-columns: 1fr;
+    }
+}
+@media(max-width:370px){
+    .decor-block{
+        top: 65rem;
     }
 }
