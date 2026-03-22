@@ -4,6 +4,7 @@
 }
  html{
     font-size: 16px;
+    overflow-x: hidden;
 }
 body{
     margin: 0;
@@ -103,7 +104,9 @@ text-align: left;
     background-repeat: no-repeat;
     width: 43rem;
     height: 43rem;
+    /*
     overflow: hidden;
+    */
     flex-shrink: 0;
     transform: translateX(2rem);
     z-index: 1;
