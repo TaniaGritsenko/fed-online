@@ -1,0 +1,350 @@
+@import url(reset.css);
+html{
+    scroll-behavior: smooth;
+}
+/*Header*/
+.site-header{
+    background-color: #668E68;
+}
+.container{
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.navbar-brand,
+.nav-link{
+    color: white;
+}
+.navbar-brand:hover,
+.nav-link:hover{
+    color: #f5f5f5;
+}
+.navbar-brand{
+    font-family: 'Georgia';
+font-weight: 400;
+font-size: 44px;
+}
+.nav-link{
+    font-family: 'Yu Gothic';
+font-weight: 500;
+font-size: 18px;
+transition: all 0.5s ease;
+}
+.nav-link:hover{
+    opacity: 0.8;
+}
+.nav-item + .nav-item{
+    margin-left: 1.5rem;
+}
+/*Hero*/
+.hero{
+    background-image: url(../img/coffee1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+.hero-title{
+color:#FFFFFF;
+font-family: 'Shadows Into Light';
+font-weight: 400;
+font-size: 110px;
+}
+/*Menu*/
+.menu{
+    padding: 4rem 0;
+    background-color: white;
+}
+.menu h2{
+font-family: 'Shadows Into Light';
+font-weight: 400;
+font-size: 40px;
+color: #000000;
+margin-bottom: 0.3rem;
+}
+.menu p{
+font-family: 'Shadows Into Light';
+font-size: 20px;
+color: #000000;
+margin: 0;
+}
+.img-container{
+position: relative;
+width: 350px;
+height: 350px;
+margin: 0 auto;
+border-radius: 50%;
+overflow: hidden;
+ border: 9px solid #81613B ;
+}
+.img-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+
+}
+.img-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255,0.85);
+    text-align: center;
+    padding: 1.5rem 0;
+}
+.img-text p{
+font-family: 'Georgia';
+font-weight: 400;
+font-size: 26px;
+color: #000000;
+}
+.menu-btn{
+background-color: #668E68;
+font-family: 'Yu Gothic';
+font-weight: 500;
+font-size: 16px;
+padding: 0.45rem 1.5rem;
+border-radius: 50px;
+border: none;
+color: white;
+transition: all 0.5s ease;
+}
+.menu-btn i{
+    color: white;
+    margin-left: 0.5rem;
+}
+.menu-btn:hover{
+    background-color: #668E68;
+    color: white;
+    opacity: 0.9;
+    transform: translateY(-3px);
+}
+/*About*/
+.about{
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(../img/cafe2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 37.5rem;
+    padding: 5rem 3rem;
+}
+.about-content{
+    color: white;
+}
+.about-title{
+    font-family: 'Shadows Into Light';
+font-weight: 400;
+font-size: 40px;
+margin-bottom: 0.5rem;
+}
+.about-subtitle{
+     font-family: 'Shadows Into Light';
+font-weight: 400;
+font-size: 20px;
+margin-bottom: 2rem;
+}
+.about-text{
+    font-family: 'Yu Gothic';
+font-weight: 500;
+font-size: 20px;
+line-height: 1.8;
+margin-bottom: 3rem;
+}
+.about-btn{
+    font-family: 'Yu Gothic';
+font-weight: 500;
+font-size: 16px;
+background-color: #668E68;
+padding: 0.45rem 1.5rem;
+border-radius: 50px;
+border: none;
+color: white;
+transition: all 0.5s ease;
+}
+.about-btn i{
+    color: white;
+    margin-left: 0.5rem;
+}
+.about-btn:hover{
+    background-color: #668E68;
+    color: white;
+    opacity: 0.9;
+    transform: translateY(-3px);
+}
+/*News*/
+.news{
+    background-color:#dfbb8e33;
+    padding: 4rem 0;
+}
+.news-title{
+    font-family: 'Shadows Into Light';
+font-weight: 400;
+font-size: 40px;
+margin-bottom: 0.6rem;
+color: #000000;
+}
+.news-subtitle{
+    font-family: 'Shadows Into Light';
+font-weight: 400;
+font-size: 20px;
+margin-bottom: 3rem;
+color: #000000;
+}
+.news-box{
+    border: 1px solid #668E68;
+    background-color: white;
+}
+.news-item{
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.5rem 0.5rem;
+    align-items: center;
+}
+.news-date{
+    font-family: 'Yu Gothic';
+font-weight: 500;
+font-size: 16px;
+min-width: 6rem;
+color: #000000;
+}
+.news-text{
+    font-family: 'Yu Gothic';
+font-weight: 500;
+font-size: 16px;
+margin: 0;
+color: #000000;
+}
+/*Footer*/
+.footer{
+    background-color: black;
+    color: white;
+    padding: 2rem 0;
+}
+.footer-text{
+    font-family: 'Yu Gothic';
+font-weight: 500;
+font-size: 16px;
+line-height: 1.7;
+opacity: 0.9;
+margin: 0;
+}
+.footer-copy{
+    font-family: 'Georgia';
+font-weight: 400;
+font-size: 16px;
+margin: 0;
+opacity: 0.9;
+}
+/*Scroll*/
+.scroll-top{
+    position: fixed;
+    right: 1.3rem;
+    bottom: 1.3rem;
+    width: 32px;
+    height: 32px;
+    background-color: #668E68;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+.scroll-top i{
+color: white;
+}
+.scroll-top:hover{
+opacity: 0.9;
+transform: translateY(-3px);
+}
+@media(max-width:1400px){
+    .hero{
+    min-height: 360px;
+    }
+    .hero-title{
+        font-size: 90px;
+    }
+}
+@media(max-width:1200px){
+    .hero{
+        min-height: 300px;
+    }
+    .hero-title{
+        font-size: 70px;
+    }
+    .img-container{
+        width: 290px;
+        height: 290px;
+    }
+}
+@media(max-width:995px){
+    .hero{
+        min-height: 250px;
+    }
+    .hero-title{
+        font-size: 50px;
+        line-height: 1;
+    }
+    .img-container{
+        width: 230px;
+        height: 230px;
+    }
+    .img-text{
+        padding: 0.3rem 0;
+    }
+    .img-text p{
+        font-size: 20px;
+    }
+}
+@media(max-width:850px){
+    .hero{
+        min-height: 200px;
+    }
+}
+@media(max-width:770px){
+    .hero{
+        height: 700px;
+        background-image: url(../img/coffeemob.png);
+    }
+    .hero-title{
+        font-size: 80px;
+    }
+    .about{
+        background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(../img/cafemob.png);
+        height: 350px;
+    }
+    .about-text{
+        font-size: 17px;
+    }
+    .news-box{
+        padding: 1.5rem 1.2rem;
+    }
+    .news-item{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0;
+    }
+}
+@media(max-width:700px){
+    .hero{
+        height: 400px;
+    }
+}
+@media(max-width:500px){
+    .hero-title{
+        font-size: 50px;
+    }
+}    
+    @media(max-width:400px){
+    .navbar-brand{
+        font-size: 30px;
+    }
+}
+
