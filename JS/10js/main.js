@@ -14,9 +14,9 @@ const userChoice = prompt("Давай пограємо введи:камінь, 
 const computerChoice = computerMove();
 alert(`Комп'ютер вибрав  ${computerChoice}`);
  if 
- (userChoice === "камінь" &&
- userChoice === "папір" &&
- userChoice === "ножиці"){
+ (userChoice != "камінь" &&
+ userChoice != "папір" &&
+ userChoice != "ножиці"){
     alert("Ви ввели неправильно");
 } else if (userChoice === computerChoice){
     alert("Нічія")
