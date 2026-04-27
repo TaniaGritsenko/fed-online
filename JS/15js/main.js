@@ -15,12 +15,7 @@ window.onload = function(){
     let btn2El = document.querySelector('.btn2');
     btn2El.style.width  = '80px';
     btn2El.style.height = '80px';
-     function getRandomColor(){
-        const r = Math.floor(Math.random()*256);
-        const g = Math.floor(Math.random()*256);
-        const b = Math.floor(Math.random()*256);
-        return `rgb(${r},${g},${b})`;
-    }
+
     btn2El.ondblclick = function (){ 
     let btnWidth = parseInt(btn2El.style.width);
     let btnHeight = parseInt(btn2El.style.height);
