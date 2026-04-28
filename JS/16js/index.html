@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HM JS 16</title>
+    <script src="main.js"></script>
+    <style>
+        .box{
+            padding: 30px;
+            background-color: aqua;
+            border: 2px solid black;
+            text-align: center;
+            cursor: pointer;
+        }
+        .textBlock{
+            position: relative;
+            padding: 50px;
+            background-color: yellow;
+        }
+        .customMenu{
+            display: none;
+            padding: 0;
+            position: absolute;
+            background-color: lightblue;
+            border: 2px solid black;
+            margin: 0;
+        }
+        .customMenu li{
+            list-style: none;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+        .customMenu li:hover{
+            background-color: white;
+        }
+        .card{
+            width: 200px;
+            transition: 0.5s;
+        }
+         
+        .menu{
+            display: none;
+            list-style: none;
+            width: 100px;
+            border: 2px solid black;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 580px;
+            left: 450px;
+            z-index: 10;
+        }
+        .menu li{
+            padding: 15px;
+            background-color: red;
+        }
+        .menu li.active{
+            background-color: blueviolet;
+        }
+
+        .drag-area{
+            width: 200px;
+            height: 150px;
+            border: 2px solid black;
+            position: relative;
+            margin-top: 40px;
+            background-color: chartreuse;
+        }
+        .drag-box{
+            width: 80px;
+            height: 80px;
+            background-color: blueviolet;
+            position: absolute;
+            left: 50px;
+            top: 20px;
+            cursor: grab;
+        }
+    </style>
+</head>
+<body>
+    <!--Завдання 1-->
+    <div class="box">
+        Наведіть мишку і фон зміниться
+    </div>
+    <br> 
+    <br>
+    <!--Завдання 2-->
+    <div class="textBlock">
+        Клікніть правою кнопкою для визову меню
+    </div>
+    <ul class="customMenu">
+        <li data-action="right">Вирівняти текс по правому краю</li>
+        <li data-action="left">Вирівняти текс по лівому краю</li>
+        <li data-action="center">Вирівняти текс по центру</li>
+        <li data-action="hide">Приховати елемент</li>
+    </ul>
+    <br>
+    <br>
+    <!--Завдання 3-->
+    <img class="card" src="img/drinks1.png" alt="Картинка">
+    <br>
+    <br>
+    <!--Завдання 4-->
+    <div class="player"></div>
+    <ul class="menu">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <br>
+    <br>
+    <!--Завдання 5-->
+    <div class="drag-area">
+        <div class="drag-box"></div>
+    </div>
+</body>
+</html>
