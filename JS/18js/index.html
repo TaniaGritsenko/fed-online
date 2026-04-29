@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HM JS 18</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    <!--Завдання 1-->
+    <form action="">
+        <h2>Виберіть улюблений колір</h2>
+        <div>
+            <input type="radio" name="color" value="yellow">
+            <label for="color">Жовтий</label>
+        </div>
+        <div>
+            <input type="radio" name="color" value="red">
+            <label for="color">Червоний</label>
+        </div>
+        <div>
+            <input type="radio" name="color" value="blue">
+            <label for="color">Синій</label>
+        </div>
+    </form>
+    <br>
+    <br>
+    <!--Завдання 2-->
+    <h2>Виберіть яке ваше хобі</h2>
+    <div>
+        <input type="checkbox" name="hobby" id="reading" value="Читання">
+        <label for="reading">Читання</label>
+
+    </div>
+    <div>
+        <input type="checkbox" name="hobby" id="sport" value="Спорт">
+        <label for="sport">Спорт</label>
+        
+    </div>
+    <div>
+        <input type="checkbox" name="hobby" id="music" value="Музика">
+        <label for="music">Музика</label>
+        <p id="result">Ви невибрали хобі</p>
+    </div>
+    <br>
+    <br>
+    <!--Завдання 3-->
+    <h2>Виберіть країну</h2>
+    <select id="country">
+        <option value="">Оберіть країну</option>
+        <option value="Ukraine">Україна</option>
+        <option value="Czech Republic">Чехія</option>
+        <option value="Greece">Греція</option>
+    </select>
+    <p id="countryResult">Виберіть країну,і тут буде інфомація</p>
+    <br>
+    <br>
+    <!--Завдання 4-->
+    <h2>Оцініть якість обслуговування: 5 - дуже добре, 1-дуже погано</h2>
+    <div>
+        <input type="radio" name="rating" id="rate1" value="1">
+        <label for="rate1">1</label>
+    </div>
+    <div>
+        <input type="radio" name="rating" id="rate2" value="2">
+        <label for="rate2">2</label>
+    </div>
+    <div>
+        <input type="radio" name="rating" id="rate3" value="3">
+        <label for="rate3">3</label>
+    </div>
+    <div>
+        <input type="radio" name="rating" id="rate4" value="4">
+        <label for="rate4">4</label>
+    </div>
+    <div>
+        <input type="radio" name="rating" id="rate5" value="5">
+        <label for="rate5">5</label>
+    </div>
+    <p id="ratingResult">Ви ще не поставили оцінку</p>
+    <br>
+    <br>
+    <!--Додаткове завдання-->
+    <h2>Меню</h2>
+    <div>
+        <label for="pizza">Оберіть піцу:</label>
+        <select id="pizza">
+            <option value="0">з Меню</option>
+            <option value="100">Сирна - 100грн</option>
+            <option value="150">Маргарита - 150грн</option>
+            <option value="200">Пепероні - 200грн</option>
+        </select>
+    </div>
+    <h3>Оберіть розмір</h3>
+    <div>
+        <input type="radio" name="size" id="s" value="0">
+        <label for="s">Стандарт</label>
+    </div>
+    <div>
+        <input type="radio" name="size" id="m" value="50">
+        <label for="m">Середня +50грн</label>
+    </div>
+    <div>
+        <input type="radio" name="size" id="l" value="100">
+        <label for="l">Велика +100грн</label>
+    </div>
+    <h3>Додаткова начинка</h3>
+    <div>
+        <input type="checkbox" name="topping" id="cheese" value="25">
+        <label for="cheese">Сир +25грн</label>
+    </div>
+    <div>
+        <input type="checkbox" name="topping" id="mushrooms" value="25">
+        <label for="mushrooms">Гриби +25грн</label>
+    </div>
+    <div>
+        <input type="checkbox" name="topping" id="sauce" value="25">
+        <label for="sauce">Соус +25грн</label>
+    </div>
+    <p id="pizzaResult">Всього: 0грн</p>
+</body>
+</html>
