@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --bg-color1: pink;
+    --bg-color2: green;
+    --bg-color3: blue;
+    --bg-color4: yellow;
+    --bg-color5: black;
+}
