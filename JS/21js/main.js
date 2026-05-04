@@ -19,7 +19,7 @@ window.onload = function(){
     let selectedColor = document.querySelector('#bgColor').value;
     localStorage.setItem('backgroundColor', selectedColor);
     document.body.style.backgroundColor = selectedColor;
-    localStorage.removeItem('backgroundColor');
+   // localStorage.removeItem('backgroundColor');
  }); 
 
  //3
