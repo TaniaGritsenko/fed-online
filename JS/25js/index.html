@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HM JS 25</title>
+    <script src="main.js"></script>
+</head>
+<style>
+    body{
+        margin: 0;
+        font-family: 'Arial';
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 30px;
+        background-color: cyan;
+    }
+    h2{
+        color: mediumvioletred;
+        text-align: center;
+        margin: 0 0 15px;
+    }
+    canvas{
+        border: 3px solid purple;
+        border-radius: 15px;
+        background-color: black;
+    }
+    .svgContent,
+    .svgRectContent{
+        width: 500px;
+        height: 300px;
+        border: 3px solid purple;
+        border-radius: 15px;
+        background-color: black;
+    }
+
+</style>
+<body>
+    <div>
+    <h2>
+        CANVAS: 3 прямокутники, які пересікаються
+    </h2>
+    <canvas id="canvas" width="500" height="300"></canvas>
+    </div>
+    <div>
+    <h2>
+        CANVAS: заливка градієнтом
+    </h2>
+    <canvas id="secondCanvas" width="500" height="300"></canvas>
+    </div>
+    <div>
+        <h2>
+        CANVAS: малювання простої лінії
+    </h2>
+    <canvas id="lineCanvas" width="500" height="300"></canvas>
+    </div>
+    <h2>
+        SVG: динамічне створення лінії
+    </h2>
+    <div class="svgContent"></div>
+    <h2>
+        SVG: створення прямокутника
+    </h2>
+    <div class="svgRectContent"></div>
+</body>
+</html>
