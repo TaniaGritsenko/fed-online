@@ -113,7 +113,20 @@ margin-top: 25px;
 }
 .rating{
 /*margin-top: 170px;*/
+display: flex;
+gap: 8px;
 margin-top: 25px;
+}
+.star-btn{
+  border: none;
+  background: transparent;
+  color: yellow;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 0;
+}
+.star-btn:hover{
+  transform: scale(1.5);
 }
 .popular-section{
 padding: 55px 40px 0;

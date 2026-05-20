@@ -4,23 +4,30 @@ import MovieInfo from './MovieInfo';
 import Rating from './Rating';
 import ActionButtons from './ActionButtons';
 
-const Hero = () => {
+const Hero = ({title, year, director, seasons, episodes, description, ratingImg}) => {
     return (
         <section className="content">
         <div className="main-container">
             <Genres/>
             <div className="movie-title">
                 <p>
-                    <strong>Stranger Things</strong>
+                    <strong>{title}</strong>
                 </p>
             </div>
-            <MovieInfo/>
+            <MovieInfo
+             year={year}
+             director={director}
+             seasons={seasons}
+             episodes={episodes}
+                />
             <div className="text-content1">
                 <p>
-                     In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries
+                     {description}
                 </p>
             </div>
-            <Rating/>
+            <Rating
+            ratingImg={ratingImg}
+            />
             <ActionButtons/>
             </div>
             </section>

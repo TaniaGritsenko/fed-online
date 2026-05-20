@@ -1,11 +1,11 @@
 import React from 'react';
 
-const AgeBadge = () => {
+const AgeBadge = ({age}) => {
     return (
         <div className="years">
                 <div className="gray-block">
                     <p>
-                        16+
+                        {age}
                     </p>
                 </div>
             </div>
