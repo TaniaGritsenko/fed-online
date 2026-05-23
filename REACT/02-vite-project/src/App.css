@@ -165,6 +165,38 @@ align-items: center;
 background: transparent;
 border: 2px solid white;
 }
+
+.modal{
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.modal-content{
+  position: relative;
+  width: 400px;
+  min-height: 150px;
+  padding: 50px 40px;
+  background-color: black;
+  border: 3px solid white;
+  border-radius: 15px;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+.modal-close{
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
 .popular{
 max-width: 900px;
 max-height: 44px;

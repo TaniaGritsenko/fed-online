@@ -1,13 +1,26 @@
 import React from 'react';
 
 const Genres = () => {
+    let genres = [
+        {
+            value: "Drama",
+        },
+        {
+            value: "Thriller",
+        },
+        {
+            value: "Supernatural",
+        },
+    ];
+    let genresEl = genres.map((item, index) => {
     return (
-        <div className="text-genre">
-                <h3>Drama</h3>
-                <h3>Thriller</h3>
-                <h3>Supernatural</h3>
-            </div>
+        <span key={index}>
+            {item.value}
+            {index !== genres.length -1 && <span className='genre-line'> | </span>}
+            </span>
     );
+});
+    return <div className='text-genre'>{genresEl}</div>
 };
 
 export default Genres;
