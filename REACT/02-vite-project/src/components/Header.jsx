@@ -1,10 +1,20 @@
-import React from 'react';
-//import Logo from '../assets/netflix-logo.png.png';
-//import SearchIcon from '../assets/fe_search.png.png';
-//import Avatar from '../assets/avatar.png.png';
+import { useState } from 'react';
 
 
 const Header = ({logo, date, searchIcon, avatar, isLoggedIn}) => {
+    const [showSearch, setShowSearch] = useState(false);
+    const[searchText, setSearchText] = useState('');
+    function changeShowSearch(){
+        setShowSearch(!showSearch);
+    }
+    function changeSearchText(e){
+        const value = e.target.value;
+        if (value.length >= 3){
+            setSearchText('Stranger Things');
+        } else{
+            setSearchText(value);
+        }
+    }
     return (
     <header>
     <div className="netflix-container">
@@ -15,9 +25,29 @@ const Header = ({logo, date, searchIcon, avatar, isLoggedIn}) => {
             </p>
         </div>
         <div className="search">
-        <button className="search-icon">
+        <button onClick={changeShowSearch}
+         className="search-icon">
             <img src={searchIcon} alt="search"/>
         </button>
+        {showSearch && (
+            <div className='search-block'>
+              <input value={searchText} 
+              onChange={changeSearchText}
+              type='text'
+              placeholder='Пошук фільму:'
+              className='search-input'/>
+              {searchText.trim() ? (
+                <p className='search-result'>
+                 Назва фільму: <br/>
+                 {searchText}   
+                </p>
+              ) : (
+                <p className='search-result'>
+                 Пошук   
+                </p>
+              )}  
+            </div>
+        )}
         {isLoggedIn? (
         <img src={avatar} alt="avatar" className="avatar"/>
         ):(
