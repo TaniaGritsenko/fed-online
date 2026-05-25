@@ -1,20 +1,31 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 const Header = ({logo, date, searchIcon, avatar, isLoggedIn}) => {
     const [showSearch, setShowSearch] = useState(false);
     const[searchText, setSearchText] = useState('');
+    const [movieTitle, setMovieTitle] = useState('');
     function changeShowSearch(){
         setShowSearch(!showSearch);
     }
     function changeSearchText(e){
-        const value = e.target.value;
-        if (value.length >= 3){
-            setSearchText('Stranger Things');
-        } else{
-            setSearchText(value);
+            setSearchText(e.target.value);
         }
-    }
+        useEffect(() => {
+            if (searchText.length >= 3) {
+                setMovieTitle('Stranger Things');
+            } else {
+                setMovieTitle('');
+            }    
+            console.log('Текс пошуку змінився:', searchText);
+            } , [searchText]);
+
+       // useEffect(() => {
+         //   console.log('Пошук відкритий або закритий:', showSearch);
+       // },[showSearch]);
+       // useEffect(() => {
+          //  console.log('Текст пошуку змінився:', searchText);
+      //  },[searchText]);
     return (
     <header>
     <div className="netflix-container">
@@ -36,10 +47,10 @@ const Header = ({logo, date, searchIcon, avatar, isLoggedIn}) => {
               type='text'
               placeholder='Пошук фільму:'
               className='search-input'/>
-              {searchText.trim() ? (
+              {movieTitle.trim() ? (
                 <p className='search-result'>
                  Назва фільму: <br/>
-                 {searchText}   
+                 {movieTitle}   
                 </p>
               ) : (
                 <p className='search-result'>
