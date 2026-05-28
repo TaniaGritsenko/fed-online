@@ -1,9 +1,9 @@
-import UseStateComponent from "./Components/UseStateComponent"
+import UseRefComponent from "./Components/UseRefComponent";
 
 function App() {
   return (
     <>
-      <UseStateComponent></UseStateComponent>
+      <UseRefComponent></UseRefComponent>
     </>
   )
 }
