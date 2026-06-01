@@ -1,0 +1,40 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: aquamarine;
+  margin: 0;
+}
+.container{
+  max-width: 1200px;
+}
+h2{
+  color: black;
+  font-weight: 700;
+}
+.card{
+  border: none;
+  border-radius: 15px;
+}
+.card-body{
+  padding: 20px;
+}
+.card-title{
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  color: rgb(68, 68, 163);
+}
+.card-subtitle{
+  font-size: 15px;
+  color: #55647a;
+}
+.card-text{
+  color: #354051;
+  line-height: 1.5;
+}
+.btn-success{
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 18px;
+}
