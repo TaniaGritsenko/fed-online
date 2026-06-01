@@ -286,7 +286,18 @@ border: 1px solid white;
 justify-content: center;
 align-items: center;
 display: flex;
+transition: transform 0.3s ease,background-color 0.3;
 }
+.prev:hover,
+.next:hover{
+  transform: scale(1.1);
+}
+.prev:active,
+.next:active{
+  transform: scale(1);
+  background-color: blueviolet;
+}
+
 .cards-container{
 display: flex;
 gap: 45px;
@@ -320,6 +331,7 @@ line-height: 141.52%;
 letter-spacing: 1px;
 text-align: right;
 }
+
 
 /*header .search{
   position: static !important;
