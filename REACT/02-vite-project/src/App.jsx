@@ -1,34 +1,30 @@
-import Header from "./components/Header"
-import Logo from "./assets/netflix-logo.png.png";
-import SearchIcon from "./assets/fe_search.png.png";
-import Avatar from "./assets/avatar.png.png";
-import Hero from "./components/Hero"
-import Popular from "./components/Popular"
-import AgeBadge from "./components/AgeBadge";
-import "./App.css";
+import {Routes, Route} from 'react-router-dom';
+import Header from './components/Header';
+import Logo from './assets/netflix-logo.png.png';
+import SearchIcon from './assets/fe_search.png.png';
+import Avatar from './assets/avatar.png.png';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Price from './Pages/Price';
+import Contact from './Pages/Contact';
+import './App.css';
 
 function App() {
   return (
     <>
-  <Header   
-    logo={Logo} 
-    date="Friday July 8th" 
-    searchIcon={SearchIcon} 
+    <Header
+    logo={Logo}
+    date='Friday July 8th'
+    searchIcon={SearchIcon}
     avatar={Avatar}
     isLoggedIn={true}
-  />
-  <Hero
-  title="Stranger Things"
-  year="2019"
-  director="Shawn Levy"
-  seasons="3"
-  episodes="5"
-  description="In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries."
-  />
-  <Popular></Popular>
-  <AgeBadge
-  age="+16"
-  />
+    />
+    <Routes>
+      <Route path='/' element={<Home></Home>}></Route>
+      <Route path='/about' element={<About></About>}></Route>
+      <Route path='/price' element={<Price></Price>}></Route>
+      <Route path='/contact' element={<Contact></Contact>}></Route>
+    </Routes>
   </>
   )
 }

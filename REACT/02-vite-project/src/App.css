@@ -33,6 +33,35 @@ font-weight: 600;
 line-height: 29px;
 text-align: left;
 }
+.nav-menu{
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.nav-menu a{
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 800;
+}
+.nav-menu a:hover{
+  color: red;
+}
+.nav-menu a.active{
+  color: red;
+  border-bottom: 2px solid red;
+}
+.page{
+  padding: 100px 70px;
+  text-align: center;
+}
+.page h1{
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.page h3{
+  font-size: 35px;
+}
 .search{
 display: flex;
 align-items: center;

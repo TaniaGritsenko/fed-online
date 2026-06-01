@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 
 const Header = ({logo, date, searchIcon, avatar, isLoggedIn}) => {
@@ -35,6 +36,12 @@ const Header = ({logo, date, searchIcon, avatar, isLoggedIn}) => {
                 {date}
             </p>
         </div>
+        <nav className='nav-menu'>
+            <NavLink to='/'>Home</NavLink>
+            <NavLink to='/about'>About</NavLink>
+            <NavLink to='/price'>Price</NavLink>
+            <NavLink to='/contact'>Contact</NavLink>
+        </nav>
         <div className="search">
         <button onClick={changeShowSearch}
          className="search-icon">
