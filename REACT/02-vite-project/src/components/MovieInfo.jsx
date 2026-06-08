@@ -4,7 +4,7 @@ const MovieInfo = () => {
     return (
         <div className="text-content">
                 <p>
-                     <strong>2019 | DIRECTOR:</strong> Shawn Levy <strong> seasons:</strong> 3 (5 Episodes)
+                     <strong> 2019 | РЕЖИСЕР:</strong> Шон Леві <strong> Сезонів:</strong> 3 (5 серій)
                 </p>
             </div>
     );

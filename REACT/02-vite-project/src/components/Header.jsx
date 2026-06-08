@@ -6,6 +6,8 @@ const Header = ({logo, date, searchIcon, avatar, isLoggedIn}) => {
     const [showSearch, setShowSearch] = useState(false);
     const[searchText, setSearchText] = useState('');
     const [movieTitle, setMovieTitle] = useState('');
+    const [login, setLogin] = useState(false)
+    const [menuOpen, setMenuOpen] = useState(false);
     function changeShowSearch(){
         setShowSearch(!showSearch);
     }
@@ -20,56 +22,48 @@ const Header = ({logo, date, searchIcon, avatar, isLoggedIn}) => {
             }    
             console.log('Текс пошуку змінився:', searchText);
             } , [searchText]);
-
-       // useEffect(() => {
-         //   console.log('Пошук відкритий або закритий:', showSearch);
-       // },[showSearch]);
-       // useEffect(() => {
-          //  console.log('Текст пошуку змінився:', searchText);
-      //  },[searchText]);
     return (
     <header>
-    <div className="netflix-container">
-        <div className="logo">
+    <div className="netflix-container container-fluid d-flex align-items-center justify-content-between">
+        <div className="logo d-flex align-items-center flex-shrink-0">
             <img src={logo} alt="Netflix logo"/>
             <p className="release-date">
                 {date}
             </p>
-        </div>
-        <nav className='nav-menu'>
-            <NavLink to='/'>Home</NavLink>
-            <NavLink to='/about'>About</NavLink>
-            <NavLink to='/price'>Price</NavLink>
-            <NavLink to='/contact'>Contact</NavLink>
+            </div>
+            <button className='burger-btn' onClick={() => setMenuOpen(!menuOpen)}>
+                <i className='fa-solid fa-bars'></i>
+            </button>
+        <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>
+            <NavLink to='/' onClick={() => setMenuOpen(false)}>Головна</NavLink>
+            <NavLink to='/about' onClick={() => setMenuOpen(false)}>Про Netflix</NavLink>
+            <NavLink to='/price' onClick={() => setMenuOpen(false)}>Підписка</NavLink>
+            <NavLink to='/contact' onClick={() => setMenuOpen(false)}>Контакти</NavLink>
         </nav>
-        <div className="search">
+        <div className="search d-flex align-items-center flex-shrink-0">
         <button onClick={changeShowSearch}
          className="search-icon">
             <img src={searchIcon} alt="search"/>
         </button>
         {showSearch && (
             <div className='search-block'>
+                <button className='search-back' onClick={changeShowSearch}>
+                    <i className='fa-solid fa-arrow-left'></i>
+                </button>
               <input value={searchText} 
               onChange={changeSearchText}
               type='text'
-              placeholder='Пошук фільму:'
+              placeholder='Пошук фільмів, серіалів, ігор...'
               className='search-input'/>
-              {movieTitle.trim() ? (
-                <p className='search-result'>
-                 Назва фільму: <br/>
-                 {movieTitle}   
-                </p>
-              ) : (
-                <p className='search-result'>
-                 Пошук   
-                </p>
-              )}  
             </div>
         )}
-        {isLoggedIn? (
-        <img src={avatar} alt="avatar" className="avatar"/>
+        {login ? (
+        <img src={avatar} 
+             alt="avatar" 
+             className="avatar" 
+             onClick={() => setLogin(false)}/>
         ):(
-            <p className='not-login'>NETFLIX</p>
+            <button className='login-btn' onClick={() => setLogin(true)}>Увійти</button>
         )}
         </div>
     </div>

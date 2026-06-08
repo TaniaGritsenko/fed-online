@@ -9,20 +9,19 @@ import "../App.css";
 
 function Home() {
   return (
-    <>
+    <main className="home-page">
   <Hero
   title="Stranger Things"
   year="2019"
-  director="Shawn Levy"
+  director="Шон Леві"
   seasons="3"
   episodes="5"
-  description="In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries."
+  description="У 1980-х роках в Індіані група друзів стикається з надприродними силами та таємними урядовими експерементами. У пошуках відповідей діти розкривають низку незвичайних таємниць."
   />
   <Popular></Popular>
   <AgeBadge
-  age="+16"
-  />
-  </>
+  age="+16" />
+  </main>
   )
 }
 

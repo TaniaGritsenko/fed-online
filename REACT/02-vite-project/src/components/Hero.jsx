@@ -7,7 +7,7 @@ import ActionButtons from './ActionButtons';
 const Hero = ({title, year, director, seasons, episodes, description, ratingImg}) => {
     return (
         <section className="content">
-        <div className="main-container">
+        <div className="main-container d-flex flex-column align-items-start">
             <Genres/>
             <div className="movie-title">
                 <p>

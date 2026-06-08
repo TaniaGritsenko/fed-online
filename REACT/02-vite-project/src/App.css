@@ -11,17 +11,16 @@ background-position: center top;
 min-height: 100vh;
 /*overflow-x: hidden;*/
 }
+
 header .netflix-container{
-display: flex;
-justify-content: space-between;
-align-items: center;
-/*padding: 70px 40px 0;*/
-padding: 40px 40px 0;
+max-width: 1500px;
+margin: 0 auto;
+padding: 35px 40px 0;
 }
 .logo{
 display: flex;
 align-items: center;
-gap: 80px;
+gap: 35px;
 }
 .release-date{
 padding-left: 25px;
@@ -73,44 +72,70 @@ background: transparent;
 border: none;
 }
 .search-block{
-  position: absolute;
-  top: 100px;
-  right: 0;
-  width: 250px;
-  border: 3px solid white;
-  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: #1f1f1f;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 25px;
+  border: none;
 }
 .search-input{
-  width: 100%;
-  padding: 10px 15px;
+  flex: 1;
   background: transparent;
-  border: 3px solid white;
-  color: white;
-  font-size: 20px;
-  font-weight: 500;
+  border: none;
   outline: none;
-  margin-bottom: 15px;
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  padding: 10px 0;
+  margin: 0;
 }
 .search-input::placeholder{
-  color: aliceblue;
+  color: #b8b8bb;
 }
-.search-result{
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.5;
+.search-back{
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
 }
 .avatar{
 width: 74px;
 height: 74px;
+border-radius: 50%;
+cursor: pointer;
+object-fit: cover;
+}
+.login-btn{
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.login-btn:hover{
+  background-color: #f40612;
 }
 .content{
-    /*padding: 115px 40px 0;*/
     padding: 70px 40px 0;
 }
 .main-cotainer{
     /*margin: 0 auto;*/
-    max-width: 760px;
+    max-width: 520px;
+    width: 100%;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .text-genre{
     display: flex;
@@ -157,8 +182,9 @@ text-align: left;
 color: white;
 }
 .text-content1{
-width: 864px;
-height: 130px;
+width: 100%;
+max-width: 480px;
+height: auto;
 color: rgba(167, 166, 166, 1);
 font-family: Inter;
 font-size: 24px;
@@ -169,7 +195,6 @@ text-align: left;
 margin-top: 25px;
 }
 .rating{
-/*margin-top: 170px;*/
 display: flex;
 gap: 8px;
 margin-top: 25px;
@@ -193,6 +218,8 @@ position: relative;
 display: flex;
 gap: 70px;
 margin-top: 25px;
+position: relative;
+z-index: 100;
 }
 .stream-now{
 width: 273px;
@@ -214,6 +241,31 @@ text-align: center;
 .img-stream{
     margin: -7px auto;
 }
+.player-episodes-menu{
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  right: 120px;
+  z-index: 10001;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 100000;
+  }
+  .player-episodes-menu .episodes-column{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .player-episodes-menu .episodes-column p{
+    margin: 0;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+  }
+  .player-episodes-menu .episodes-column p.active{
+    color: yellow;
+  }
 .episodes{
 width: 273px;
 height: 64px;
@@ -221,38 +273,24 @@ border-radius: 10px;
 align-items: center;
 background: transparent;
 border: 2px solid white;
+cursor: pointer;
+position: relative;
+z-index: 101;
 }
-
-.modal{
-  position: fixed;
-  inset: 0;
-  background-color: black;
+.episodes-column{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  
+  flex-direction: column;
+  gap: 20px;
 }
-.modal-content{
-  position: relative;
-  width: 400px;
-  min-height: 150px;
-  padding: 50px 40px;
-  background-color: black;
-  border: 3px solid white;
-  border-radius: 15px;
+.episodes-column p{
+  margin: 0;
+  font-size: 20px;
   color: white;
-  font-size: 25px;
-  text-align: center;
-}
-.modal-close{
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 30px;
   cursor: pointer;
+}
+.episodes-column p:hover,
+.episodes-column .active{
+  color: yellow;
 }
 .popular{
 max-width: 900px;
@@ -331,255 +369,150 @@ line-height: 141.52%;
 letter-spacing: 1px;
 text-align: right;
 }
-
-
-/*header .search{
-  position: static !important;
-  left: auto !important;
-  right: auto !important;
-  display: flex !important;
-  align-items: center;
+.burger-btn{
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
 }
-header .search-icon img{
-  width: 28px;
-  height: 28px;
-  display: block;
-}
-header .avatar{
-  width: 74px;
-  height: 74px;
-  display: block;
-  border-radius: 50%;
-}*/
-@media(max-width:1180px){
-    .release-date{
-        font-size: 30px;
-        white-space: nowrap;
-    }
-    .search{
-        position: relative;
-        /*left: 45%;*/
-    }
-    .movie-title{
-        white-space: nowrap;
-        padding: 50px 0;
-    }
-    .text-content1{
-        font-size: 30px;
-        margin-top: 35px;
-        width: 100%;
-        height: 250px;
-    }
-    .stream-now{
-        white-space: nowrap;
-    }
-    .episodes{
-        white-space: nowrap;
-    }
-    .buttons{
-        gap: 20%;
-    }
-    .popular{
-        white-space: nowrap;
-    }
-    .popular-tatle{
-        font-size: 30px;
-    }
-    .navigate{
-        margin-left: 110%;
-    }
-    .cards-container{
-        gap: 10px;
-    }
-    .years{
-        position: fixed;
-        top: 150px;
-        right: 10px;
-    }
-}
-    
-/*.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
-
-  &:hover {
-    border-color: var(--accent-border);
+@media(max-width:1140px){
+  header .netflix-container{
+    padding: 35px 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 18px;
   }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
-}
-
-.hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
-}
-
-#center {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
+  .logo{
     gap: 18px;
   }
-}
-
-#next-steps {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-#next-steps ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
+  .release-date{
     font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
+    line-height: 22px;
+    padding-left: 18px;
+  }
+  .nav-menu{
+    gap: 10px;
+    flex-wrap: nowrap;
+  }  
+  .popular-section .main-container{
+    max-width: 720px;
+  }
+  @media(max-width:970px) {
+    header .netflix-container{
+      max-width: 100%;
+      margin: 0;
+      padding: 30px 18px 0;
+      gap: 10px;
+      flex-wrap: nowrap;
     }
-    .button-icon {
-      height: 18px;
-      width: 18px;
+    .nav-menu{
+      display: none;
+    }
+    .logo{
+      gap: 10px;
+    }
+    .content{
+      padding: 40px 25px 0;
+    }
+
+    .login-btn{
+      font-size: 11px;
+      padding: 5px 5px;
+    }
+    .burger-btn{
+      display: block !important;
+      position: absolute;
+      top: 30px;
+      right: 250px;
+      background: transparent;
+      /*
+      order: 3;
+      */
+      border: 3px solid red;
+    }
+    .nav-menu{
+      display: none !important;
+    }
+    .nav-menu.active{
+      display: flex !important;
+      position: absolute !important;
+      top: 100px !important;
+      left: auto !important;
+      right: 20px !important;
+      background-color: rgba(0, 0, 0, 0.95);
+      padding: 15px;
+      border-radius: 8px;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 15px;
+      z-index: 9999;
+    }
+    .nav-menu.active a{
+      font-size: 15px;
+      text-decoration: none;
+    }
+    .popular-section .main-container{
+      max-width: 100%;
+    }
+    .popular-card img{
+      height: 170px;
+    }
+    .popular-card p{
+      font-size: 15px;
+    }
+    .years{
+      position: fixed;
+      right: 5px;
+      top: 150px;
+      bottom: 60px;
+    }
+    .home-page{
+      position: relative;
+      min-height: 100vh;
     }
   }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
+  @media(max-width:660px){
+    .login-btn{
+      font-size: 10px;
+      padding: 5px 10px;
     }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
+    .burger-btn{
+      right: -60px;
+    }
+    .search{
+      gap: 15px;
+    }
+    .years{
+      right: 0;
+    }
+  }
+  @media(max-width:440px){
+    .logo{
+      font-size: 25px;
+    }
+    .burger-btn{
+      right: 150px;
+      order: 3;
+    }
+    .release-date,
+    .nav-menu{
+      display: none;
+    }
+    .buttons{
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  }
+  @media(max-width:360px){
+    .burger-btn{
+      display: none !important;
     }
   }
 }
 
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
-}
-
-.ticks {
-  position: relative;
-  width: 100%;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
-
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
-  }
-}
-  */
+    

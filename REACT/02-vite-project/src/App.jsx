@@ -14,7 +14,7 @@ function App() {
     <>
     <Header
     logo={Logo}
-    date='Friday July 8th'
+    date="П'ятниця , 8 липня "
     searchIcon={SearchIcon}
     avatar={Avatar}
     isLoggedIn={true}

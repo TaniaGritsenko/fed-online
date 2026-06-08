@@ -3,13 +3,13 @@ import React from 'react';
 const Genres = () => {
     let genres = [
         {
-            value: "Drama",
+            value: "Драма",
         },
         {
-            value: "Thriller",
+            value: "Трилер",
         },
         {
-            value: "Supernatural",
+            value: "Надприродне",
         },
     ];
     let genresEl = genres.map((item, index) => {
