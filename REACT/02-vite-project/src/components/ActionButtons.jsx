@@ -7,6 +7,10 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons';
 const ActionButtons = () => {
     const[isPlayOpen, setIsPlayOpen] = useState(false);
     const[isEpisodesOpen, setIsEpisodesOpen] = useState(false);
+    const[showSeasons, setShowSeasons] = useState(false);
+    const[showSeries, setShowSeries] = useState(false);
+    const[selectedSeason, setSelectedSeason] = useState('1 сезон');
+    const[selectedSeries, setSelectedSeries] = useState('1 серія');
     const elementStream = () => {
         console.log('натиснула дивитися зараз')
         setIsPlayOpen(true);
@@ -56,22 +60,65 @@ const ActionButtons = () => {
                             X
                         </button>
                         {isEpisodesOpen && (
-                    <div className='player-episodes-menu'>
+                    <div className='player-episodes-menu' 
+                    style={{
+                        position: 'absolute',
+                        top: '120px',
+                        left: '25px',
+                        right: '25px',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'flex-start',
+                        zIndex: '10'
+                    }}>
                         <div className='episodes-column'>
-                            <p className='active'>
-                                1 сезон
+                            <p className='active' onClick={() => setShowSeasons(!showSeasons)}
+                                style={{ cursor: 'pointer'}}>
+                                {selectedSeason}
                             </p>
-                            <p>2 сезон</p>
-                            <p>3 сезон</p>
+                            {showSeasons && (
+                                <>
+                            <p onClick={() => {
+                                setSelectedSeason('1 сезон');
+                                setShowSeasons(false)}}> 1 сезон</p>
+                            <p onClick={() => {
+                                setSelectedSeason('2 сезон');
+                                setShowSeasons(false)}}> 2 сезон</p>
+                            <p onClick={() => {
+                                setSelectedSeason('3 сезон');
+                                setShowSeasons(false)}}> 3 сезон</p>
+                                </>
+                            )}   
                             </div>
                             <div className='episodes-column'>
-                                <p className='active'>
-                                    1 серія
+                                <p className='active' onClick={() => setShowSeries(!showSeries)}
+                                style={{cursor: 'pointer'}}>
+                                    {selectedSeries}
                                 </p>
-                                <p>2 серія</p>
-                                <p>3 серія</p>
-                                <p>4 серія</p>
-                                <p>5 серія</p>
+                                {showSeries && (
+                                    <>
+                                    <p onClick={() => {
+                                        setSelectedSeries('1 серія');
+                                        setShowSeries(false)
+                                    }}>1 серія</p>
+                                    <p onClick={() => {
+                                        setSelectedSeries('2 серія');
+                                        setShowSeries(false)
+                                    }}>2 серія</p>
+                                    <p onClick={() => {
+                                        setSelectedSeries('3 серія');
+                                        setShowSeries(false)
+                                    }}>3 серія</p>
+                                    <p onClick={() => {
+                                        setSelectedSeries('4 серія');
+                                        setShowSeries(false)
+                                    }}>4 серія</p>
+                                    <p onClick={() => {
+                                        setSelectedSeries('5 серія');
+                                        setShowSeries(false)
+                                    }}>5 серія</p>
+                                    </>
+                                )}
                             </div>
                         </div>
                         )}

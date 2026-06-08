@@ -241,31 +241,6 @@ text-align: center;
 .img-stream{
     margin: -7px auto;
 }
-.player-episodes-menu{
-  position: absolute;
-  top: 120px;
-  left: 120px;
-  right: 120px;
-  z-index: 10001;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  z-index: 100000;
-  }
-  .player-episodes-menu .episodes-column{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .player-episodes-menu .episodes-column p{
-    margin: 0;
-    font-size: 25px;
-    color: white;
-    cursor: pointer;
-  }
-  .player-episodes-menu .episodes-column p.active{
-    color: yellow;
-  }
 .episodes{
 width: 273px;
 height: 64px;
